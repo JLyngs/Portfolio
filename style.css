@@ -1,229 +1,242 @@
 /* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Calibre:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=SF+Mono:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Calibre:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=SF+Mono:wght@400;700&display=swap");
 
 /* Color */
 :root {
-    --background-color: #0a192f;
-    --primary-color: #64ffda;
-    --secondary-color: #8892b0;
-    --text-color: #ccd6f6;
-    --accent-color: rgba(100, 255, 218, 0.1);
+  --bg-color: #0a192f;
+  --color-1: #64ffda;
+  --color-2: #8892b0;
+  --txt-color: #ccd6f6;
+  --color-3: #64ffda1a;
 }
 
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Calibre', sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    line-height: 1.5;
+  margin: 0px;
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  background-color: var(--bg-color);
+  color: var(--txt-color);
+  font-family: Calibre, sans-serif;
+  font-size: 20px;
+  line-height: 1.3;
 }
 
 /* Header og nav */
 header {
-    position: fixed;
-    width: 100%;
-    background-color: var(--background-color);
-    z-index: 1000;
+  position: fixed;
+  width: 100%;
+  background-color: var(--bg-color);
+  z-index: 1000;
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 20px 50px;
+  width: 100%;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  font-size: 13px;
 }
 
-nav .logo img{
-    height: 40px;
+nav .logo img {
+  height: 40px;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
+nav ol {
+  list-style: none;
+  display: flex;
 }
 
 nav li {
-    margin-left: 30px;
+  margin-left: 30px;
 }
 
 nav a {
-    color: var(--text-color);
-    text-decoration: none;
-    position: relative;
-    padding: 10px;
-    transition: color 0.3s;
+  color: var(--txt-color);
+  text-decoration: none;
+  position: relative;
+  padding: 10px;
+  transition: color 0.3s;
 }
 
 nav a::after {
-    content: '';
-    position: absolute;
-    width: 0%;
-    height: 2px;
-    background: var(--primary-color);
-    left: 0;
-    bottom: 0;
-    transition: width 0.3s;
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: var(--color-1);
+  left: 0;
+  bottom: 0;
+  transition: width 0.3s;
 }
 
 nav a:hover {
-    color: var(--primary-color);
+  color: var(--color-1);
 }
 
 nav a:hover::after {
-    width: 100%;
+  width: 100%;
 }
 
 /* Hero section */
 .hero {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 100vh;
-    padding: 0 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 0 50px;
 }
 
 .hero h1 {
-    font-size: 48px;
-    color: var(--primary-color);
-    margin-bottom: 20px;
+  font-size: 48px;
+  color: var(--color-1);
+  margin-bottom: 20px;
 }
 
 .hero h2 {
-    font-size: 64px;
-    color: var(--text-color);
-    margin-bottom: 20px;
+  font-size: 64px;
+  color: var(--txt-color);
+  margin-bottom: 20px;
 }
 
 .hero h3 {
-    font-size: 48px;
-    color: var(--secondary-color);
-    margin-bottom: 20px;
+  font-size: 48px;
+  color: var(--color-2);
+  margin-bottom: 20px;
 }
 
 .hero p {
-    font-size: 20px;
-    color: var(--secondary-color);
-    max-width: 600px;
-    margin-bottom: 40px;
+  font-size: 20px;
+  color: var(--color-2);
+  max-width: 600px;
+  margin-bottom: 40px;
 }
 
-.cta-button {
-    padding: 15px 30px;
-    color: var(--primary-color);
-    border: 1px solid var(--primary-color);
-    text-decoration: none;
-    transition: background 0.3s;
+.button {
+  padding: 15px 30px;
+  color: var(--color-1);
+  border: 1px solid var(--color-1);
+  text-decoration: none;
+  transition: background 0.3s;
+  border-radius: 5px;
 }
 
-.cta-button:hover {
-    background: var(--accent-color);
+.button:hover {
+  background: var(--color-3);
+}
+
+nav .button {
+  padding: 10px 20px;
 }
 
 /* Sections */
 section {
-    padding: 100px 50px;
+  padding: 100px 50px;
 }
 
 section h2 {
-    font-size: 32px;
-    margin-bottom: 40px;
-    position: relative;
+  font-size: 32px;
+  margin-bottom: 40px;
+  position: relative;
 }
 
 section h2::after {
-    content: '';
-    position: absolute;
-    width: 100px;
-    height: 2px;
-    background: var(--primary-color);
-    left: 0;
-    bottom: -10px;
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 2px;
+  background: var(--color-1);
+  left: 0;
+  bottom: -10px;
 }
 
 /* Projekter Section */
 .project {
-    background-color: #112240;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 4px;
+  background-color: #112240;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 4px;
 }
 
 .project h3 {
-    color: var(--primary-color);
-    margin-bottom: 10px;
+  color: var(--color-1);
+  margin-bottom: 10px;
 }
 
 .project p {
-    color: var(--secondary-color);
-    margin-bottom: 10px;
+  color: var(--color-2);
+  margin-bottom: 10px;
 }
 
 .project-link {
-    color: var(--primary-color);
-    text-decoration: none;
+  color: var(--color-1);
+  text-decoration: none;
 }
 
 .project-link:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* Footer */
 footer {
-    text-align: center;
-    padding: 20px;
-    background-color: var(--background-color);
-    color: var(--secondary-color);
+  text-align: center;
+  padding: 20px;
+  background-color: var(--bg-color);
+  color: var(--color-2);
 }
 
 .social-links {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .social-links a {
-    color: var(--secondary-color);
-    margin: 0 10px;
-    text-decoration: none;
-    font-family: 'SF Mono', monospace;
+  color: var(--color-2);
+  margin: 0 10px;
+  text-decoration: none;
+  font-family: "SF Mono", monospace;
 }
 
 .social-links a:hover {
-    color: var(--primary-color);
+  color: var(--color-1);
 }
 
 /* Responsivt */
 @media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        align-items: center;
-    }
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    nav ul {
-        flex-direction: column;
-        margin-top: 20px;
-    }
+  nav ol {
+    flex-direction: column;
+    margin-top: 20px;
+  }
 
-    nav li {
-        margin-left: 0;
-        margin-top: 10px;
-    }
+  nav li {
+    margin-left: 0;
+    margin-top: 10px;
+  }
 
-    .hero h1 {
-        font-size: 32px;
-    }
+  .hero h1 {
+    font-size: 32px;
+  }
 
-    .hero h2 {
-        font-size: 48px;
-    }
+  .hero h2 {
+    font-size: 48px;
+  }
 
-    .hero h3 {
-        font-size: 32px;
-    }
+  .hero h3 {
+    font-size: 32px;
+  }
 }
