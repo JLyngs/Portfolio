@@ -1,60 +1,133 @@
 <!DOCTYPE html>
 <html lang="da">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <title>Jakob Lyngsøe</title>
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="Logo.png" type="image/png">
-</head>
-<body>
-    <header>
-        <nav>
-            <a href="#home" class="logo">
-                <img src="logo.png" alt="Jakob Lyngsøe Logo">
-            </a>
-            <ol>
-                <li><a href="#about">Om Jakob Lyngsøe</a></li>
-                <li><a href="#projects">Projekter</a></li>
-                <li><a href="#contact">Kontakt</a></li>
-                <li><a href="JL_CV.pdf" class="button" target="_blank">Resume</a></li>
-            </ol>
-        </nav>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="files/Logo.png" type="image/png" />
+  </head>
+  <body>
+    <header id="navbarheader">
+      <nav>
+        <a href="#" class="logo">
+          <img src="files/Logo.png" alt="Jakob Lyngsøe Logo" />
+        </a>
+        <ul>
+          <li><a href="#about">Om Jakob Lyngsøe</a></li>
+          <li><a href="#projects">Projekter</a></li>
+          <li><a href="#contact">Kontakt</a></li>
+          <li><a href="files/JL_CV.pdf" class="button" target="_blank">Resume</a></li>
+        </ul>
+      </nav>
     </header>
+
+    <div class="side_LeftElement">
+      <ul class="socials">
+        <li>
+          <a href="https://github.com/JLyngs"target="_blank"
+          rel="noopener noreferrer"><i class="bx bxl-github"></i></a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/jakoblyngsoe/"target="_blank"
+          rel="noopener noreferrer"
+            ><i class="bx bxl-linkedin-square"></i
+          ></a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="side_RightElement">
+      <ul class="email">
+        <li>
+          <a
+            href="mailto:lyngsoejakob@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="bx bx-envelope"></i
+          ></a>
+        </li>
+      </ul>
+    </div>
+
     <main>
-        <section id="home" class="hero">
-            <h1>Jakob Lyngsøe</h1>
-            <h2>Læser programmering</h2>
-            <p>til datatekniker med speciale i programmering, og søger derfor en læreplads. Velkommen til min side!</p>
-            <a href="#contact" class="button">Kontakt mig</a>
-        </section>
+      <section class="hero">
+        <h1>Jakob Lyngsøe</h1>
+        <h2>Læser programmering</h2>
+        <h3>
+          til datatekniker med speciale i programmering, og søger derfor en
+          læreplads. Velkommen til min side!
+        </h3>
+        <a href="#contact" class="button">Kontakt mig</a>
+      </section>
 
-        <section id="projects">
-            <h2>Projekter</h2>
-            <div class="project">
-                <h3>Projekt Titel</h3>
-                <p>Projekt beskrivelse</p>
-                <a href="projekt-link" class="project-link">Se projektet</a>
+      <section class="about">
+        <h2 class="SectionHeader">Om Jakob Lyngsøe</h2>
+        <div class="inner">
+            <div class="about-text">
+                <p>Hej! Mit navn er Jakob og jeg går på datatekniker uddannelsen på SDE Odense.
+                    jeg er nuværende uden en læreplads, og søger derfor efter en virksomhed, 
+                    hvor jeg kan udvikle mig som programmør, og udfordre min viden.
+                </p>
+                <p>
+                    Hele mit liv har jeg været interesseret i teknologi, og har altid haft interesse for at lære nyt.
+                    Under Data- og kommunikationsuddannelsen, havde jeg forestilt mig, at jeg skulle være en IT-supporter
+                    Men efter én uge af undervisning i programmering, var jeg bestemt. Jeg skulle programmere.
+                </p>
+                <p>
+                    Jeg elsker at lære nye ting, når jeg er på vej mellem skole og hjem, læser jeg bøger eller hører podcasts om programmering.
+                    I øjeblikket finder jeg specielt Thorsten Balls bøger om programmering interessante, og har læst "Writing an Interpreter in Go" flere gange.
+                    I min fritid går jeg til Volleyball hver Onsdag, ellers bruger jeg tiden på min kæreste eller computeren.
+                </p>
+                <p>
+                    Jeg har siden prøvet hænder med emner som C#, Python, JavaScript, Webdevelopment, .Net, SQL, GDScript og andet.
+                </p>
             </div>
-        </section>
-
-        <section id="about">
-            <h2>Om Jakob Lyngsøe</h2>
-            <p>About text her</p>
-        </section>
-
-        <section id="contact">
-            <h2>Kontakt</h2>
-            <p>Kontakt mig via email: <a href="mailto:lyngsoejakob@gmail.com">lyngsoejakob@gmail.com</a></p>
-        </section>
-    </main>
-    <footer>
-        <div class="social-links">
-            <a href="https://github.com/JLyngs" target="_blank">GitHub</a>
-            <a href="https://www.linkedin.com/in/jakoblyngsoe/" target="_blank">LinkedIn</a>
+            <div class="about-image">
+                <img src="files/Mig-min.jpg" alt="Jakob Lyngsøe"/>
+            </div>
         </div>
-    </footer>
+      </section>
+
+      <section id="projects">
+        <h2 class="SectionHeader">Projekter</h2>
+
+        <div class="project">
+          <h3>Grundforløb 2 Eksamen</h3>
+          <p>Til GF2 eksamen lavede jeg sammen med en anden elev en OrdreManager i Python. 
+            Dette var vores første større program efter at have lært noget programmering. 
+            Projektet havde mange ønsker til forbedring og implementationer, dog ikke muligt i tidsrummet for eksamenen.</p>
+            <img src="files/GF2.png" alt="GF2 Projekt"/>
+          <a href="https://drive.google.com/file/d/1eJ1L8oEeHmpmBHubngZXRXExXQqKjScz/view?usp=sharing"target="_blank"
+          rel="noopener noreferrer" class="project-link">Se projektet</a>
+        </div>
+
+        <div class="project">
+          <h3>Grundforløb 2 Eksamen</h3>
+          <p>Projekt beskrivelse</p>
+            <img src="files/GF2.png" alt="GF2 Projekt"/>
+          <a href="https://drive.google.com/file/d/1eJ1L8oEeHmpmBHubngZXRXExXQqKjScz/view?usp=sharing" class="project-link">Se projektet</a>
+        </div>
+        
+      </section>
+
+      <section id="contact">
+        <h2 class="SectionHeader">Kontakt</h2>
+        <p>
+          Kontakt mig via email:
+          <a href="mailto:lyngsoejakob@gmail.com">lyngsoejakob@gmail.com</a>
+        </p>
+      </section>
+    </main>
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
