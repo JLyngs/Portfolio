@@ -1,6 +1,4 @@
 /* Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Calibre");
-@import url("https://fonts.googleapis.com/css2?family=SF+Mono");
 @import url("https://fonts.googleapis.com/css?family=Fira Code");
 @import url("https://fonts.googleapis.com/css?family=Fira Mono");
 @import url("https://fonts.googleapis.com/css?family=Roboto Mono");
@@ -11,8 +9,8 @@
   --color-1: #64ffda; /* Primary accent color */
   --color-2: #8892b0; /* Secondary text color */
   --txt-color: #ccd6f6; /* Main text color */
-  --color-3: rgba(100, 255, 218, 0.1); /* Hover/background accent */
-  --font-1: 'SF Mono','Fira Code','Fira Mono','Roboto Mono',monospace;
+  --color-3: rgba(100, 255, 218, 0.1); /* Third color */
+  --font-1:'Fira Code','Fira Mono','Roboto Mono',monospace;
 }
 
 *, ::before, ::after {
@@ -42,7 +40,7 @@ body {
   -webkit-font-smoothing: antialiased;
   background-color: var(--bg-color);
   color: var(--txt-color);
-  font-family: "Calibre", sans-serif;
+  font-family: sans-serif;
   font-size: 20px;
   line-height: 1.3;
 }
@@ -135,6 +133,10 @@ nav a {
   text-decoration: none;
   position: relative;
   transition: color 0.3s;
+}
+
+nav a.logo {
+  height: 40px;
 }
 
 nav a::after {
@@ -257,6 +259,10 @@ nav .button:hover {
   font-size: 24px;
   color: var(--color-2);
   margin-bottom: 20px;
+}
+
+.hero ul {
+  display: none;
 }
 
 .button {
@@ -449,6 +455,7 @@ section {
     color: var(--txt-color);
     font-size: 36px;
     cursor: pointer;
+    padding: 0px;
   }
 
   .nav-links {
@@ -499,6 +506,21 @@ section {
 
   .hero h3 {
     font-size: 32px;
+  }
+
+  .hero ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    margin-top: 20px;
+    list-style: none;
+    font-size: 32px;
+  }
+
+  .hero li {
+    margin: 0 10px;
   }
 
   .about .inner {
